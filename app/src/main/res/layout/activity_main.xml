@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="125dp"
+        android:layout_height="42dp"
+        android:inputType="numberSigned"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" android:id="@+id/etControl"
+        app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp" android:hint="No Control"
+        app:layout_constraintHorizontal_bias="0.308"/>
+    <EditText
+        android:layout_width="252dp"
+        android:layout_height="45dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" android:id="@+id/etNombre" android:layout_marginTop="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/etControl" android:hint="Nombre del Estudiante"/>
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="41dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" android:id="@+id/etCarrera" android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" android:hint="Carrera"/>
+    <EditText
+        android:layout_width="146dp"
+        android:layout_height="42dp"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/etEdad"
+        android:layout_marginTop="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/etCarrera" android:hint="Edad"
+        android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"/>
+    <Button
+        android:text="Buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBuscar" app:layout_constraintStart_toEndOf="@+id/etControl"
+        android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        android:layout_marginTop="72dp" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.533" android:onClick="buscarEstudiante"/>
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="152dp"
+        android:onClick="agregarEstudiante"
+        android:text="Agregar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnModificar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:text="Modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btnModificar" app:layout_constraintHorizontal_bias="0.527"
+        android:layout_marginBottom="152dp" app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="actualizarEstudiante" android:enabled="false"/>
+    <Button
+        android:text="Eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEliminar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="40dp"
+        android:layout_marginBottom="152dp" app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="eliminarEstudiante" android:enabled="false"/>
+    <Button
+        android:text="Consultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConsulta" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_bias="0.248" android:onClick="Consultar"
+        android:layout_marginTop="36dp" app:layout_constraintTop_toBottomOf="@+id/btnAgregar"/>
+    <Button
+        android:text="Limpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLimpiar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@+id/btnConsulta" android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnEliminar"
+        app:layout_constraintHorizontal_bias="0.508" android:onClick="limpiarCajas"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
